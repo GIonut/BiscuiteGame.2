@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4217391237244656032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4217391237244656034}
+  - component: {fileID: 4217391237244656033}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4217391237244656034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217391237244656032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.035002, y: 9.91038, z: -0.85302734}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4217391237244656033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217391237244656032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996a51d68598d9240ad11cea8cdf08fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 2
+  createBiscuit: {fileID: 4077494428799889288, guid: d48d68af297d4f140a0641e3e2e44ca7,
+    type: 3}
+  placeBiscuit: {fileID: 3138653568481636047, guid: 6edb81d077247cb4e9d4b7459e9bc0b7,
+    type: 3}
+  lines: {fileID: 6361271209841462807, guid: 6f8ec6b103f705946bafed5c1f9c1244, type: 3}
+  biscuitParent: {fileID: 1804342994359385775, guid: f2eb2bf746b4e0243bb7ab4f0fe50866,
+    type: 3}
+  Player1Stats: {fileID: 6382497552599053243, guid: 78e2ba61d61d4d04b9899b56a426af98,
+    type: 3}
+  Player2Stats: {fileID: 2001560601206503357, guid: 1a9b2d039ca03b8429e6ea6460096c74,
+    type: 3}
+  WinningPanel: {fileID: 2079797172422849549, guid: fa2817f6dec19274bbb40f205156f4d4,
+    type: 3}
+  sceneLoader: {fileID: 6121593650696866497, guid: c9cbfc5378f39df41bfcba589198a376,
+    type: 3}
+  playerSymbol: {fileID: 2832761155927895092, guid: 71d3c328c95d59842aa59e66c5e80a51,
+    type: 3}
+  otherPlayerSymbol: {fileID: 4368407348574612783, guid: 5eb5e21d3cdf97d4b9d4dacd87f985d7,
+    type: 3}
