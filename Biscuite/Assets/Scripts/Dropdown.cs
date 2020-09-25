@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Dropdown : MonoBehaviour
 {
+    private void Start()
+    {
+        PlayerPrefs.SetInt("BiscuitSize", 11);
+    }
+
     public void DropdownHandler(int value)
     {
         switch (value)

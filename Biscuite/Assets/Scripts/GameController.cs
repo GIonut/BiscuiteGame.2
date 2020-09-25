@@ -166,15 +166,17 @@ public class GameController : MonoBehaviour
             {
                 
                 //SetNeighbours(1);// 1 means endingCircle is the right neighbour of startingCircle 
-                lines.DrawLine(startingCircleX + 0.5f, startingCircleY, false);
                 MarkBiscuitsSide(startingCircleX + 0.5f, startingCircleY, false);
+                lines.DrawLine(startingCircleX + 0.5f, startingCircleY, false);
+                
             }
             // if we want to draw the line from left to right, move it a little to the left
             else
             {
                 //SetNeighbours(3);// 3 means endingCircle is the left neighbour of startingCircle
-                lines.DrawLine(startingCircleX - 0.5f, startingCircleY, false);
                 MarkBiscuitsSide(startingCircleX - 0.5f, startingCircleY, false);
+                lines.DrawLine(startingCircleX - 0.5f, startingCircleY, false);
+                
             }
         }
         // otherwise place the line verticaly( the offset 0.5f  is used to place it right in between the circles)
@@ -184,15 +186,17 @@ public class GameController : MonoBehaviour
             if (startingCircleY - endingCircleY == -1f)
             {
                 //SetNeighbours(0); // 0 means endingCircle is the upper neighbour of startingCircle
-                lines.DrawLine(startingCircleX, startingCircleY + 0.5f, true);
                 MarkBiscuitsSide(startingCircleX, startingCircleY + 0.5f, true);
+                lines.DrawLine(startingCircleX, startingCircleY + 0.5f, true);
+                
             }
             // draw the line from top to bottom
             else
             {
                 //SetNeighbours(2); // 2 means endingCircle is the bottom neighbour of startingCircle
-                lines.DrawLine(startingCircleX, startingCircleY - 0.5f, true);
                 MarkBiscuitsSide(startingCircleX, startingCircleY - 0.5f, true);
+                lines.DrawLine(startingCircleX, startingCircleY - 0.5f, true);
+                
             }
         }
     }
@@ -314,12 +318,19 @@ public class GameController : MonoBehaviour
             if (player1Score > player2Score)
             {
                 WinningPanelText[0].text = "Player 1 Has Won!";
+                PlayerPrefs.SetInt("win", 1);
+                
 
             }
             else
             {
                 WinningPanelText[0].text = "Player 2 Has Won!";
+                PlayerPrefs.SetInt("win", 2);
+                
             }
+
+            PlayerPrefs.SetInt("p1", player1Score);
+            PlayerPrefs.SetInt("p2", player2Score);
             Invoke("LoadWinningScene", 0.2f);
 
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System;
 
 public class BiscuitMatrix : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class BiscuitMatrix : MonoBehaviour
 
     public void SetLine(float x, float y, int direction)
     {
+        if(GetBiscuitOnPosition(x, y).GetComponent<Biscuit>().isSideClosed(direction))
+            throw new System.ArgumentException(); // if there is already a line, throw an exception;
         try
         {
             biscuitMatrix[x][y].GetComponent<Biscuit>().SetLine(direction);

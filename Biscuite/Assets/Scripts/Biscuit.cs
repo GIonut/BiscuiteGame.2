@@ -71,6 +71,11 @@ public class Biscuit : MonoBehaviour
         }
     }
 
+    public bool isSideClosed(int direction)
+    {
+        return sides[direction];
+    }
+
     public bool IsClosed()
     {
         foreach(bool side in sides)
