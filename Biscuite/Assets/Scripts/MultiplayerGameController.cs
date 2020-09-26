@@ -106,8 +106,7 @@ public class MultiplayerGameController : MonoBehaviour
         // the formula for the number of all biscuits in the matrix is   ( 1 + 3 + 5 + height-1)*2 + height + 1
         // which can be simplyfied to the formula bellow;
         numberOfBiscuits = height * height / 2 + height + 1;
-
-        Debug.Log("here");
+        
         // Tell extension I'm ready to play
         sfs.Send(new ExtensionRequest("ready", new SFSObject(), sfs.LastJoinedRoom));
     }
@@ -275,6 +274,7 @@ public class MultiplayerGameController : MonoBehaviour
 	 */
     private void StartGame(int whoseTurn, int p1Id, int p2Id, string p1Name, string p2Name)
     {
+        Debug.Log("here");
         this.whoseTurn = whoseTurn;
         player1Name = p1Name;
         player2Name = p2Name;

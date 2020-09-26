@@ -35,8 +35,8 @@ public class LobbyController : MonoBehaviour
 	// Private properties
 	//----------------------------------------------------------
 
-	private const string EXTENSION_ID = "biscuiteExtension";
-	private const string EXTENSION_CLASS = "com.a51integrated.sfs2x.BiscuiteExtension";
+	private const string EXTENSION_ID = "Biscuite";
+	private const string EXTENSION_CLASS = "sfs2x.extensions.games.biscuite.BiscuiteExtension";
 
 	private SmartFox sfs;
 	private bool shuttingDown;
